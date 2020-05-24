@@ -1,0 +1,90 @@
+{
+	"studentData": {
+		"name": "John Citizen",
+		"roleClass": "10A"
+	},
+
+	"timetableData": {
+		"10 Science A": {
+			"startTime": "08:50",
+			"periodLength": "45 minutes",
+			"lesson": "10 Science A",
+			"room": " at A1.1",
+			"teacher": " with Mr Newton"
+		},
+
+		"10 Science A": {
+			"startTime": "9:35",
+			"periodLength": "45 minutes",
+			"lesson": "10 Science A",
+			"room": " at A1.1",
+			"teacher": " with Mr Newton"
+		},
+
+		"10 Agriculture C": {
+			"startTime": "10:20",
+			"periodLength": "45 minutes",
+			"lesson": "10 Agriculture C",
+			"room": " at T2.4",
+			"teacher": " with Ms Helicoverpa"
+		},
+
+		"Recess": {
+			"startTime": "11:05",
+			"periodLength": "30 minutes",
+			"lesson": "",
+			"room": "",
+			"teacher": "11:05"
+		},
+
+		"10 English A": {
+			"startTime": "11:35",
+			"periodLength": "45 minutes",
+			"lesson": "10 English A",
+			"room": " at W1.3",
+			"teacher": " with Ms Book"
+		},
+
+		"10 History A": {
+			"startTime": "12:20",
+			"periodLength": "45 minutes",
+			"lesson": "10 History A",
+			"room": " at C1.5",
+			"teacher": " with Ms Old"
+		},
+
+		"Lunch": {
+			"startTime": "13:05",
+			"periodLength": "30 minutes",
+			"lesson": "",
+			"room": "",
+			"teacher": "13:05"
+
+
+		},
+
+		"10 PD/H/PE A": {
+			"startTime": "13:35",
+			"periodLength": "45 minutes",
+			"lesson": "10 PD/H/PE A",
+			"room": " at T1.1",
+			"teacher": " with Mr Fit"
+		},
+
+		"10 PD/H/PE A": {
+			"startTime": "14:20",
+			"periodLength": "45 minutes",
+			"lesson": "10 PD/H/PE A",
+			"room": " at T1.1",
+			"teacher": " with Mr Fit"
+		},
+
+		"End of Day": {
+			"startTime": "15:05",
+			"lesson": "",
+			"room": "",
+			"teacher": "15:05"
+		}
+	}
+
+}
