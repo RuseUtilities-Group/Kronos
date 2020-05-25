@@ -31,7 +31,7 @@ a:hover{
     background: gold !important;
     line-height: 1.5;
     font-size: .875rem;
-    color: #fff !important;
+    color: grey !important;
     vertical-align: middle;
     white-space: nowrap;
     border-radius: 2px;
@@ -43,7 +43,7 @@ a:hover{
   font-family: Roboto, sans-serif;
   text-align: center;
   background-color: gold !important;
-  color: #fff !important;
+  color: grey !important;
   border: 1px solid transparent;
   border-radius: 4px;
   margin: 0;
