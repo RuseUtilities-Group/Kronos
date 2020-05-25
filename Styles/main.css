@@ -292,12 +292,19 @@ td {
 
 }
 
+#times1{
+   text-align: left;
+   margin-left: 220;
+   font-size: 20px
+
+}
+
 #timer{
-  font-size: 50px;
+  font-size: 60px;
 }
 
 #period{
-  margin-top: 40px;
+  margin-top: 25px;
   font-size: 15px;
 }
 
@@ -307,6 +314,15 @@ td {
 }
 
 .css-centre-inside {
+  display: inline-block;
+}
+
+.css-centre-outside1 {
+  text-align: center;
+  padding-top: 40;
+}
+
+.css-centre-inside1 {
   display: inline-block;
 }
 
