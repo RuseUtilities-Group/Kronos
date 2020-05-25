@@ -42,7 +42,7 @@
       }
       let xhr = new XMLHttpRequest();
       xhr.responseType = 'json';
-      xhr.open('GET', './Scripts/timetableProto1.json', true);
+      xhr.open('GET', './Scripts/bellTimesDefault.json', true);
       xhr.onload = function () {
           json = xhr.response;
           table = document.getElementById("times");
@@ -51,8 +51,7 @@
               tstr += "<tr><td>";
               tstr += k;
               tstr += "</td><td>";
-              tstr += v.teacher;
-              tstr += v.room;
+              tstr += v.startTime;
               tstr += "</td></tr>";
               times.push({periodName: k, timeFrom: timeStringToMS(v.startTime)});
           }
