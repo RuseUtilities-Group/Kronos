@@ -5,7 +5,7 @@
 	},
 
 	"timetableData": {
-		"10 Science A": {
+		"P1: 10 Science A": {
 			"startTime": "08:50",
 			"periodLength": "45 minutes",
 			"lesson": "10 Science A",
@@ -13,7 +13,7 @@
 			"teacher": " with Mr Newton"
 		},
 
-		"10 Science A": {
+		"P2: 10 Science A": {
 			"startTime": "9:35",
 			"periodLength": "45 minutes",
 			"lesson": "10 Science A",
@@ -21,7 +21,7 @@
 			"teacher": " with Mr Newton"
 		},
 
-		"10 Agriculture C": {
+		"P3: 10 Agriculture C": {
 			"startTime": "10:20",
 			"periodLength": "45 minutes",
 			"lesson": "10 Agriculture C",
@@ -37,7 +37,7 @@
 			"teacher": "11:05"
 		},
 
-		"10 English A": {
+		"P4: 10 English A": {
 			"startTime": "11:35",
 			"periodLength": "45 minutes",
 			"lesson": "10 English A",
@@ -45,7 +45,7 @@
 			"teacher": " with Ms Book"
 		},
 
-		"10 History A": {
+		"P5: 10 History A": {
 			"startTime": "12:20",
 			"periodLength": "45 minutes",
 			"lesson": "10 History A",
@@ -63,7 +63,7 @@
 
 		},
 
-		"10 PD/H/PE A": {
+		"P6: 10 PD/H/PE A": {
 			"startTime": "13:35",
 			"periodLength": "45 minutes",
 			"lesson": "10 PD/H/PE A",
@@ -71,7 +71,7 @@
 			"teacher": " with Mr Fit"
 		},
 
-		"10 PD/H/PE A": {
+		"P7: 10 PD/H/PE A": {
 			"startTime": "14:20",
 			"periodLength": "45 minutes",
 			"lesson": "10 PD/H/PE A",
