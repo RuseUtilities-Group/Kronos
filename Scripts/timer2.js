@@ -51,8 +51,7 @@ let next = 0;
               tstr += "<tr><td>";
               tstr += k;
               tstr += "</td><td>";
-              tstr += v.teacher;
-              tstr += v.room;
+              tstr += v.startTime;
               tstr += "</td></tr>";
               times.push({periodName: k, timeFrom: timeStringToMS(v.startTime)});
           }
