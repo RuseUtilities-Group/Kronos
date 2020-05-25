@@ -2,6 +2,7 @@ let next = 0;
       let times = [];
       let today = new Date();
       today.setHours(0,0,0,0);
+      console.log(today)
       function timeTil() {
           return (times[next].timeFrom + today.getTime()) - Date.now();
       }
