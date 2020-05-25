@@ -1,7 +1,7 @@
 {
 "timetableData": {
 
-"monday":{
+
 	"Period 1":{
 		"startTime": "08:50",
 		"periodLength": "42 minutes",
@@ -54,11 +54,9 @@
 
 	"End of Day":{
 		"startTime": "15:05"
-	}
+	},
 
-},
 
-"tuesday":{
 	"Period 1":{
 		"startTime": "08:50",
 		"periodLength": "48 minutes",
@@ -106,11 +104,9 @@
 
 	"End of Day":{
 		"startTime": "15:05"
-	}
+	},
 
-},
 
-"wednesday":{
 	"Period 1":{
 		"startTime": "08:50",
 		"periodLength": "45 minutes",
@@ -160,9 +156,7 @@
 		"startTime": "15:05"
 	},
 
-},
 
-"thursday":{
 	"Period 1":{
 		"startTime": "08:50",
 		"periodLength": "45 minutes",
@@ -217,9 +211,7 @@
 		"startTime": "15:05"
 	},
 
-},
 
-"friday":{ 
 	"Period 1":{
 		"startTime": "08:50",
 		"periodLength": "45 minutes",
@@ -267,7 +259,6 @@
 
 	"End of Day":{
 		"startTime": "15:05"
-	},
 
 
 }
