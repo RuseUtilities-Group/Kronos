@@ -1,4 +1,5 @@
 let next = 0;
+let jsonPath = 'Scripts/'
       let times = [];
       let today = new Date();
       function day() {return today.getDay();}
@@ -69,7 +70,7 @@ let next = 0;
 
       let xhr = new XMLHttpRequest();
       xhr.responseType = 'json';
-      xhr.open('GET', 'bellTimes.json', true);
+      xhr.open('GET', jsonPath + 'bellTimes.json', true);
       xhr.onload = function () {
           json = xhr.response;
 	  gen_table(json);
