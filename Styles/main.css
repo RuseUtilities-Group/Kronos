@@ -40,7 +40,7 @@ a:hover{
 
 /*CSS for the  Enter Classes Button in Index.Html*/
 .buttonEnterClasses{
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif !important;
   text-align: center;
   background-color: gold !important;
   color: grey !important;
