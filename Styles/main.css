@@ -328,9 +328,9 @@ td {
 
 /*Upload Container*/
 .upload{
-  margin-right: 50px;
-  font-size: 20px;
-  text-align: left;
+  margin-right: 50px !important;
+  font-size: 20px !important;
+  text-align: left !important;
 }
 
 
