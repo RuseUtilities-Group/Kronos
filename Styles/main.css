@@ -333,7 +333,11 @@ td {
   text-align: left !important;
 }
 
-
+/*Calendar CSS*/
+#calendar{
+  text-align: centre !important;
+  margin-left: 420px !important;
+}
 
 
 
