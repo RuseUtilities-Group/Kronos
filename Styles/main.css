@@ -5,6 +5,13 @@ body{
 	background-color: var(--bg-color); 
 	font-family: Roboto, sans-serif;
 }
+/*Ruse Logo on Every Page Bottom Right Corner*/
+#ruselogo{
+	position: absolute;
+        right: 0px;
+        bottom: 0px;
+	opacity: 0.5;
+}
 /*CSS for the Container Area on Index.Html*/
 #container{
   margin-top: 100px;
