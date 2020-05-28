@@ -216,9 +216,9 @@ input:checked + .slider:before {
 
 /*Data Themes*/
 :root {
-    --primary-color: #222222;
-    --secondary-color: grey;
-    --bg-color: white;
+    --primary-color: #222222 !important;
+    --secondary-color: grey !important;
+    --bg-color: white !important;
 }
 
 
