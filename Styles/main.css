@@ -229,9 +229,9 @@ input:checked + .slider:before {
 }
 
 [data-theme="dark"] {
-    --primary-color: white;
-    --secondary-color: grey;
-    --bg-color: #222222;
+    --primary-color: white !important;
+    --secondary-color: grey !important;
+    --bg-color: #222222 !important;
 }
 
 [data-theme="gold"] {
