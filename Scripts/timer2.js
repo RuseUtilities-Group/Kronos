@@ -1,5 +1,6 @@
-let next = 0;
-let jsonPath = 'Scripts/'
+
+      let next = 0;
+      let jsonPath = 'Scripts';
       let times = [];
       let today = new Date();
       function day() {return today.getDay();}
@@ -16,7 +17,9 @@ let jsonPath = 'Scripts/'
           let s = Math.floor(tt / 1000) %60;
           let m = Math.floor(tt / (1000 * 60)) %60;
           let h = Math.floor(tt / (1000 * 60 * 60)) %60;
-          return String(h).padStart(2, '0') + ':' +
+	  let d = Math.floor(tt / (1000 * 60 * 60 * 24));
+          return (d == 0 ? '' : d + ':') + 
+	      String(h).padStart(2, '0') + ':' +
               String(m).padStart(2, '0') + ':' +
               String(s).padStart(2, '0');
       }
@@ -31,7 +34,12 @@ let jsonPath = 'Scripts/'
       function gen_table(json) {
 	  table = document.getElementById("times");
           tstr = "";
-          for(const [k, v] of Object.entries(json.timetableData[dateNamesTo[day()].toLowerCase()])) {
+	  it = json.timetableData[dateNamesTo[day()].toLowerCase()]
+	  if (it === undefined) {
+	      it = {};
+	  }
+			       
+          for(const [k, v] of Object.entries(it)) {
               tstr += "<tr><td>";
               tstr += k;
               tstr += "</td><td>";
@@ -53,7 +61,7 @@ let jsonPath = 'Scripts/'
           while (tt < 0) {
               console.log("iteration");
               next++;
-              if (next == times.length) {
+              while (next == times.length) {
                   //this only occurs in the event that
                   //the next period is tomorrow
                   next = 0;
