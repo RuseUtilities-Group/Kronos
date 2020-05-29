@@ -15,7 +15,7 @@ function timeTilHMS() {
     let tt = timeTil();
     let s = Math.floor(tt / 1000) %60;
     let m = Math.floor(tt / (1000 * 60)) %60;
-    let h = Math.floor(tt / (1000 * 60 * 60)) %60;
+    let h = Math.floor(tt / (1000 * 60 * 60)) % 24;
     let d = Math.floor(tt / (1000 * 60 * 60 * 24));
     return (d == 0 ? '' : d + ':') + 
 	String(h).padStart(2, '0') + ':' +
