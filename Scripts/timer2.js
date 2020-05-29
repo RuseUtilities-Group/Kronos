@@ -53,22 +53,28 @@ function gen_table(json) {
 function updateDay() {
     document.getElementById("day").innerHTML = dateNamesTo[day()];
 }
-function update(json) {
-    timer = document.getElementById("timer");
-    period = document.getElementById("period");
-    let tt = timeTil();
-    while (tt < 0) {
-        console.log("iteration");
-        next++;
-        while (next == times.length) {
+
+function moveDay(json) {
+            while (next == times.length) {
             //this only occurs in the event that
             //the next period is tomorrow
             next = 0;
 	    times = [];
+	    console.log(next, times.length)
             today.setDate(today.getDate()+1); //tomorrow comes today
 	    gen_table(json);
 	    updateDay();
-        }
+            }
+}
+function update(json) {
+    timer = document.getElementById("timer");
+    period = document.getElementById("period");
+    moveDay(json);
+    let tt = timeTil();   
+    while (tt < 0) {
+        console.log("iteration");
+        next++;
+	moveDay(json);
         tt = timeTil();
     }
     timer.innerHTML = timeTilHMS();
