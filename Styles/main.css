@@ -17,9 +17,9 @@ body{
 #container{
   margin-top: 10%;
 	text-align: center;
-	width: 450px;
-	height: 475px;
-	margin-right: 50%;
+	width: 70%;
+	height: 70%;
+	margin-left: 15%;
 }
 
 a:hover{
