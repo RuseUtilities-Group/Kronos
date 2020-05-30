@@ -345,8 +345,27 @@ td {
   text-align: centre !important;
   margin-left: 220px !important;
 }
+/*CSS For Alert Buttons LOOOL*/
+.alert {
+  padding: 20px;
+  background-color: gold;
+  color: var(--primary-color);
+}
 
+.closebtn {
+  margin-left: 15px;
+  color: var(--primary-color);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.closebtn:hover {
+  color: #D4AF37;
+}
 
 
 
