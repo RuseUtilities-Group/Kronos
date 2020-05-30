@@ -348,6 +348,7 @@ td {
 /*CSS For Alert Buttons LOOOL*/
 .alert {
   padding: 20px;
+  margin-bottom: 1px !important;
   background-color: gold;
   color: var(--primary-color);
 }
