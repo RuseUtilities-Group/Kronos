@@ -352,6 +352,7 @@ td {
   background-color: gold;
   color: var(--primary-color);
   margin-top: 200px;
+  width: 60px;
 }
 
 .closebtn {
