@@ -21,7 +21,7 @@ function daysFrom(date1, date2) {
     return Math.round((ndate2 - ndate1) / (1000 * 60 * 60 * 24));
 }
 function week() {
-    return (Math.floor((daysFrom(jan1, today) - 4) / 7) % 2) ? 'A' : 'B';
+    return (Math.floor((daysFrom(jan1, today) - 4) / 7) % 2) ? 'B' : 'A';
     // this is fragile
     // but the week a b system is fucked anyway ...
 }
