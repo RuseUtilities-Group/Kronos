@@ -2,12 +2,30 @@ let next = 0;
 let jsonPath = 'Scripts/';
 let times = [];
 let today = new Date();
+let jan1 = new Date();
+jan1.setMonth(0);
+jan1.setDate(1);
+jan1.setHours(0,0,0,0);
 function day() {return today.getDay();}
 let dateNamesFrom = {"sunday":0, "monday":1, "tuesday":2, "wednesday":3,
 		     "thursday":4, "friday":5, "saturday":6}
 let dateNamesTo = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
 		   "Friday", "Saturday"]
 today.setHours(0,0,0,0);
+
+function daysFrom(date1, date2) {
+    let ndate1 = new Date(date1.getTime());
+    let ndate2 = new Date(date2.getTime());
+    ndate1.setHours(0,0,0,0);
+    ndate2.setHours(0,0,0,0);
+    return Math.round((ndate2 - ndate1) / (1000 * 60 * 60 * 24));
+}
+function week() {
+    return (Math.floor((daysFrom(jan1, today) - 4) / 7) % 2) ? 'A' : 'B';
+    // this is fragile
+    // but the week a b system is fucked anyway ...
+}
+
 function timeTil() {
     return (times[next].timeFrom + today.getTime()) - Date.now();
 }
@@ -15,10 +33,8 @@ function timeTilHMS() {
     let tt = timeTil();
     let s = Math.floor(tt / 1000) %60;
     let m = Math.floor(tt / (1000 * 60)) %60;
-    let h = Math.floor(tt / (1000 * 60 * 60)) % 24;
-    let d = Math.floor(tt / (1000 * 60 * 60 * 24));
-    return (d == 0 ? '' : d + ':') + 
-	String(h).padStart(2, '0') + ':' +
+    let h = Math.floor(tt / (1000 * 60 * 60));
+    return String(h).padStart(2, '0') + ':' +
         String(m).padStart(2, '0') + ':' +
         String(s).padStart(2, '0');
 }
@@ -33,8 +49,9 @@ function timeStringToMS(timeString) {
 function gen_table(json) {
     table = document.getElementById("times");
     tstr = "";
-    it = json.timetableData[dateNamesTo[day()].toLowerCase()]
+    it = json.timetableData[dateNamesTo[day()].toLowerCase() + week()]
     if (it === undefined) {
+	console.log ("Uh oh");
 	it = {};
     }
     
