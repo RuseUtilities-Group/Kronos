@@ -137,7 +137,7 @@ a:hover{
   
 
     margin-left: 650px;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 1rem;
 
 }
@@ -345,8 +345,30 @@ td {
   text-align: centre !important;
   margin-left: 220px !important;
 }
+/*CSS For Alert Buttons LOOOL*/
+.alert {
+  padding: 20px;
+  margin-bottom: 1px !important;
+  background-color: gold;
+  color: var(--primary-color);
+  margin-top: 200px;
+  width: 100%;
+}
 
+.closebtn {
+  margin-left: 15px;
+  color: var(--primary-color);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.closebtn:hover {
+  color: #D4AF37;
+}
 
 
 
