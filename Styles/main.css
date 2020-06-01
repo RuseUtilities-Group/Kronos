@@ -230,53 +230,48 @@ input:checked + .slider:before {
 }
 
 
-[data-theme="default"] {
-    --primary-color: #FFD700;
-    --secondary-color: #D5A32D;
-    --bg-color: #5F9EA0;
-}
-
 [data-theme="dark"] {
     --primary-color: white !important;
     --secondary-color: grey !important;
     --bg-color: #222222 !important;
 }
 
-[data-theme="gold"] {
+/*Data Values for Primary Colors It Doesnt Work LOOOOOOL
+[data-values="1"] {
     --primary: #FFD700;
 }
 
-[data-theme="blue"] {
+[data-theme="2"] {
     --primary: blue;
 }
 
-[data-theme="pink"] {
+[data-theme="3"] {
     --primary: pink;
 }
 
-[data-theme="purple"] {
+[data-theme="4"] {
     --primary: purple;
 }
 
-[data-theme="darkBlue"] {
+[data-theme="5"] {
     --primary: darkblue;
 }
 
-[data-theme="aqua"] {
+[data-theme="6"] {
     --primary: aqua;
 }
 
-[data-theme="lightGreen"] {
+[data-theme="7"] {
     --primary: lightgreen;
 }
 
-[data-theme="darkGreen"] {
+[data-theme="8"] {
     --primary: darkgreen;
 }
 
-[data-theme="red"] {
+[data-theme="9"] {
     --primary: red;
-}
+}*/
 
 
 /*Settings.Html Primary Colours Styling*/
