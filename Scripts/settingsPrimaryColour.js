@@ -1,19 +1,23 @@
-const goldColour = document.querySelector('.goldColour input[type="button"]');
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
   
-    if (currentTheme === 'gold') {
-        goldColour.checked = true;
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
     }
 }
 
 function switchTheme(e) {
     if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'gold');
-        localStorage.setItem('theme', 'gold');
-    } 
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {document.documentElement.setAttribute('data-theme', 'default');
+          localStorage.setItem('theme', 'light');
+    }    
 }
 
-goldColour.addEventListener('click', switchTheme, false);
+toggleSwitch.addEventListener('change', switchTheme, false);
+
