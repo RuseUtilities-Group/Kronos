@@ -204,7 +204,9 @@ input:checked + .slider:before {
   padding-bottom: 30px;
 }
 
-
+#linksDiv {
+  padding-bottom: 30px;
+}
 
 #homeIcon {
   padding-right: 50px;
