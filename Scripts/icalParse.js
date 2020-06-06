@@ -73,11 +73,15 @@ async function icalProcess() {
 			var lctn = events[i].getFirstPropertyValue('location');
 
 			//Dealing with time
-			var periodStart = new Date(Date.UTC(eventStart.year, eventStart.month, eventStart.day, eventStart.hour, eventStart.minute, 0, 0))
-			periodStart = new Date(periodStart.toLocaleString("en-US", {timeZone: "Australia/Sydney"}));
+			// var periodStart = new Date(Date.UTC(eventStart.year, eventStart.month, eventStart.day, eventStart.hour, eventStart.minute, 0, 0))
+			var periodStart = new Date(Date.UTC(1, 1, 1, eventStart.hour, eventStart.minute, 0, 0))
+			periodStart.setDate(1);
+			// // periodStart = new Date(periodStart.toLocaleString("en-US", {timeZone: "Australia/Sydney"}));
 
-			var periodEnd = new Date(Date.UTC(eventEnd.year, eventEnd.month, eventEnd.day, eventEnd.hour, eventEnd.minute, 0, 0))
-			periodEnd = new Date(periodEnd.toLocaleString("en-US", {timeZone: "Australia/Sydney"}));
+			// var periodEnd = new Date(Date.UTC(eventEnd.year, eventEnd.month, eventEnd.day, eventEnd.hour, eventEnd.minute, 0, 0))
+			var periodEnd = new Date(Date.UTC(1, 1, 1, eventEnd.hour, eventEnd.minute, 0, 0))
+			periodEnd.setDate(1);
+			// periodEnd = new Date(periodEnd.toLocaleString("en-US", {timeZone: "Australia/Sydney"}));
 
 			var hours = periodStart.getHours();
 			var minute = periodStart.getMinutes();
@@ -105,10 +109,11 @@ async function icalProcess() {
 
 			// console.log(jsonData.timetableData[listOfDays[curDay]]);
 			// jsonData.timetableData[listOfDays[curDay]][`Period ${period}`];
-			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].startTime = `hours : ${minute.toString().padStart(2, '0')}`;
+			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].startTime = `${hours}:${minute.toString().padStart(2, '0')}`;
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
 
-			// console.log(periodStart);
+			console.log(periodStart);
+			console.log(periodEnd);
 			// console.log(hours + ":" + minute.toString().padStart(2, '0'));
 			// console.log(Math.abs(periodEnd - periodStart) / (1000 * 60));
 			// console.log(teacher);
@@ -121,6 +126,7 @@ async function icalProcess() {
 			// jsonTimetable["teacher"] = events[i].getFirstPropertyValue('description');
 		}
 		console.log(jsonData);
+		localStorage.setItem("personalTimetable", JSON.stringify(jsonData));
 	} catch(err) {
 		console.log(err);
 	}
