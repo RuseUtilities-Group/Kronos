@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html>
-	
-<head>
-  <meta charset="UTF-8">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Description" content="A simple website for lesson starting and ending times and to alert you when to go to class or go to break.">
+		<link rel="stylesheet" type="text/css" href="./Styles/main.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
 
-  <meta name="Description" content="A simple website for lesson starting and ending times and to alert you when to go to class or go to break.">
+		<title>Kronos</title>
 
-  <link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
-  <title>Kronos</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-  <link rel="stylesheet" type="text/css" href="./Styles/main.css" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+			gtag('config', 'UA-168347540-1');
+		</script>
+		<script type="text/javascript" src="/Scripts/ical.js"></script>
+	</head>
 
-  gtag('config', 'UA-168347540-1');
-</script>
+	<body>
+		<div id="container">
 
-</head>
+			<img id="logo" src="./Styles/images/kronosicon.jpg" alt="Kronos Logo" style=""/>
 
-	
-<body>
-	
-<div id="container">
+			<div id="kronosTitle">
+				<h1 >Kronos</h1> 
+			</div>
 
-    <img id="logo" src="./Styles/images/kronosicon.jpg" alt="Kronos Logo" style=""/>
+			<p id="build">Beta v0.6</p>
 
-  <div id="kronosTitle">
-   <h1 >Kronos</h1> 
-  </div>
+			<div id="info">
+				<p style="display:" inline;>Welcome to Kronos, a student organiser designed</p>
+				<p style="display:" inline;> for JRAHS's students and teachers, notifying </p>
+				<p style="display:" inline;>when to go to <b>class</b> or go to <b>break</b>.</p>
+			</div>
 
-    <p id="build">Beta v0.6</p>
-
-
-  <div id="info">
-    <p style="display:" inline;>Welcome to Kronos, a student organiser designed</p>
-    <p style="display:" inline;> for JRAHS's students and teachers, notifying </p>
-      <p style="display:" inline;>when to go to <b>class</b> or go to <b>break</b>.</p>
-  </div>
-
-  <div >
-    <a href="times.html" class="buttonEnterClasses" style="font: Roboto !important">Enter Bell Times</a> 
-  </div>
+			<div>
+				<a href="times.html" class="buttonEnterClasses" style="font: Roboto !important">Enter Bell Times</a> 
+			</div>
+		</div>	
 
 
-</div>	
+		<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
 
-
- <script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
-
-<footer>
-	<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
-	<div class="alert" style="margin-top: 250px !important;">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Note!</strong> Get the Chrome Extension Today! <a href="https://chrome.google.com/webstore/detail/kronos/olhbpdalnokbaabnlodbcefpfbnjioam?authuser=8&hl=en">https://chrome.google.com/webstore/detail/kronos/olhbpdalnokbaabnlodbcefpfbnjioam?authuser=8&hl=en</a>
-</div>
-</footer>
-</body>
+		<footer>
+			<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
+			<div class="alert" style="margin-top: 250px !important;">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+				<strong>Note!</strong> Get the Chrome Extension Today! <a href="https://chrome.google.com/webstore/detail/kronos/olhbpdalnokbaabnlodbcefpfbnjioam?authuser=8&hl=en">https://chrome.google.com/webstore/detail/kronos/olhbpdalnokbaabnlodbcefpfbnjioam?authuser=8&hl=en</a>
+			</div>
+		</footer>
+	</body>
 
 
 </html>

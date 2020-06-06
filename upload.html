@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-	<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
-	<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
-	<title>Upload iCal File</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<head>
+		<meta charset="UTF-8">
+		<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
+		<title>Upload iCal File</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-  gtag('config', 'UA-168347540-1');
-</script>
+			gtag('config', 'UA-168347540-1');
+		</script>
+		<script type="text/javascript" src="/Scripts/icalParse.js"></script>
+		<script type="text/javascript" src="/Scripts/ical.js"></script>
 
 	</head>
-<body>
-<header>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<body>
+		<header>
+			<!-- The sidebar -->
 
-<!-- The sidebar -->
-	
-<div class="sidebar">
-  <a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
-  <a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
-  <a href="./calendar.html" id="classesDiv"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
-  <a href="./upload.html" id="settingsDiv" style="color: #D4AF37 !important;"><i class="fa fa-fw fa-arrow-up" id="settingsIcon"></i>Upload Timetable</a>
-  <a href="./settings.html" id="settingsDiv" style="margin-top: 15px"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
-  
-</div>
+			<div class="sidebar">
+				<a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
+				<a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
+				<a href="./calendar.html" id="classesDiv"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
+				<a href="./upload.html" id="settingsDiv" style="color: #D4AF37 !important;"><i class="fa fa-fw fa-arrow-up" id="settingsIcon"></i>Upload Timetable</a>
+				<a href="./settings.html" id="settingsDiv" style="margin-top: 15px"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
 
-</header>
-<main>
-	
-	
-<div class="upload">
-	<div id="outputLOL"> <h4 style="font-size: 30px !important">Upload School Timetable </h4>
-	<p>How to upload your timetable from Sentral:</p>
-	<p>1. Login to <a href="https://jamesruseahs.sentral.com.au/portal/login" target="_blank">Sentral</a></p>
-	<p>2. Go to the timetable tag on the left side of the page.</p>
-	<p>3. Click "Export as ICal"</p>
-	<p>4. Upload the downloaded iCal here.</p>
-	<p>5. Press Submit and use a now personalised Bell Timer</p>
+			</div>
+
+		</header>
+		<main>
 
 
+			<div class="upload">
+				<div id="outputLOL"> <h4 style="font-size: 30px !important">Upload School Timetable </h4>
+					<p>How to upload your timetable from Sentral:</p>
+					<p>1. Login to <a href="https://jamesruseahs.sentral.com.au/portal/login" target="_blank">Sentral</a></p>
+					<p>2. Go to the timetable tag on the left side of the page.</p>
+					<p>3. Click "Export as ICal"</p>
+					<p>4. Upload the downloaded iCal here.</p>
+					<p>5. Press Submit and use a now personalised Bell Timer</p>
 
-  <input type="file" id="myFile" onChange="parseIcal(file)">
-					   </div>
-	
 
-	</div>
-	
-</main>
-<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
-	<script>console.log("Change Created")</script>
-<footer>
-	<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
-	<div class="alert" style="margin-top: 400px !important; width: 100% !important">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Note!</strong> This Section is still under constuction. Upload timetable feature coming soon!
-</div>
-</footer>
-</body>
+					<input type="file" id="myFile" onChange="icalProcess()"/>
+
+				</div>
+
+		</main>
+		<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
+		<script>console.log("Change Created")</script>
+		<footer>
+			<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
+			<div class="alert" style="margin-top: 400px !important; width: 100% !important">
+				<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+				<strong>Note!</strong> This Section is still under constuction. Upload timetable feature coming soon!
+			</div>
+		</footer>
+	</body>
 </html>

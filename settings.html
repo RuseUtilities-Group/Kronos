@@ -1,124 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
-	<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
-	<title>Settings</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<head>
+		<meta charset="UTF-8">
+		<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  gtag('config', 'UA-168347540-1');
-</script>
+		<title>Settings</title>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-168347540-1');
+		</script>
+		<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>
+		<script type="text/javascript" src="/Scripts/ical.js"></script>
 	</head>
 
-	
-<body>
-	
-	
-<header>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<body>
+		<header>
 
-<!-- The sidebar -->
-<div class="sidebar">
-  <a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
-  <a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
-  <a href="./calendar.html" id="classesDiv"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
-  <a href="./upload.html" id="settingsDiv"><i class="fa fa-fw fa-arrow-up" id="settingsIcon"></i>Upload Timetable</a>
-  <a href="./settings.html" id="settingsDiv" style="margin-top: 15px; color: #D4AF37 !important"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
-  
-</div>
+			<!-- The sidebar -->
+			<div class="sidebar">
+				<a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
+				<a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
+				<a href="./calendar.html" id="classesDiv"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
+				<a href="./upload.html" id="settingsDiv"><i class="fa fa-fw fa-arrow-up" id="settingsIcon"></i>Upload Timetable</a>
+				<a href="./settings.html" id="settingsDiv" style="margin-top: 15px; color: #D4AF37 !important"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
+			</div>
 
-</header>
- 
+		</header>
+		<main style="text-align:center">
+			<div class="theme-switch-wrapper"> 
+				<em style="padding-right: 20px">Night Mode</em>
+				<label class="theme-switch" for="checkbox">
+					<input type="checkbox" id="checkbox" />
+					<div class="slider round"></div>
+				</label>
+			</div>
 
-
-
-  <main style="text-align:center">
-
- 
- <div class="theme-switch-wrapper"> 
- 	<em style="padding-right: 20px">Night Mode</em>
-       <label class="theme-switch" for="checkbox">
-    <input type="checkbox" id="checkbox" />
-    <div class="slider round"></div>
-  </label>
-  </div>
-	  
-<div style="padding: 20px !important">
-	<span style="padding-right: 10px !important"><i> Primary Colour</i> </span>
-<button class="buttonEnterClasses">CHANGE</button>
-<script type="text/javascript" src="./Scripts/changeButtonColour.js"></script>
-</div>
+			<div style="padding: 20px !important">
+				<span style="padding-right: 10px !important"><i> Primary Colour</i> </span>
+				<button class="buttonEnterClasses">CHANGE</button>
+				<script type="text/javascript" src="./Scripts/changeButtonColour.js"></script>
+			</div>
 
 
- <script type="text/javascript" src="./Scripts/settingsTheme.js"></script>
-<div style="padding: 10px !important">
-	  <h4>About:</h4>
-	  <p>A student organiser designed  for JRAHS's students and teachers, notifying  when to go to class or go to break.</p>
-	  <p>Made By The Ruse Utilities Group<br>
-Our Team:
-<table style="margin-left: 400px; text-align: left;">
-<tr>
-	<td> Founder, Project Manager and Programmer: </td>
-	<td> Joshua Koh </td>
-</tr>
-<tr>
-	<td>Moderator and Programmer: </td>
-	<td> Jerry Li </td>
-</tr>
-<tr>
-	<td> Head Programmer: </td>
-	<td> Chris Ahn </td>
-</tr>
-<tr>
-	<td> Head Programmer: </td>
-	<td> Ethan Du Toit </td>
-</tr>
-<tr>
-	<td> General Manager and Programmer: </td>
-	<td> Yurui Zi </td>
-</tr>
-<tr>
-	<td> Consumer Relations and Backup Programmer: </td>
-	<td> Jeremy Yuan </td>
-</tr>
-<tr>
-	<td> Marketing Manager and Backup Programmer: </td>
-	<td> Aaroh Tewani </td>
-</tr>
-<tr>
-	<td> App Programmer: </td>
-	<td> Kyle Zhang</td>
-</tr>
-<tr>
-	<td> Backup Programmer: </td>
-	<td> Michael Chen </td>
-</tr>
+			<div style="padding: 10px !important">
+				<h4>About:</h4>
+				<p>A student organiser designed  for JRAHS's students and teachers, notifying  when to go to class or go to break.</p>
+				<p>Made By The Ruse Utilities Group<br>
+				Our Team:
+				<table style="margin-left: 400px; text-align: left;">
+					<tr>
+						<td> Founder, Project Manager and Programmer: </td>
+						<td> Joshua Koh </td>
+					</tr>
+					<tr>
+						<td>Moderator and Programmer: </td>
+						<td> Jerry Li </td>
+					</tr>
+					<tr>
+						<td> Head Programmer: </td>
+						<td> Chris Ahn </td>
+					</tr>
+					<tr>
+						<td> Head Programmer: </td>
+						<td> Ethan Du Toit </td>
+					</tr>
+					<tr>
+						<td> General Manager and Programmer: </td>
+						<td> Yurui Zi </td>
+					</tr>
+					<tr>
+						<td> Consumer Relations and Backup Programmer: </td>
+						<td> Jeremy Yuan </td>
+					</tr>
+					<tr>
+						<td> Marketing Manager and Backup Programmer: </td>
+						<td> Aaroh Tewani </td>
+					</tr>
+					<tr>
+						<td> App Programmer: </td>
+						<td> Kyle Zhang</td>
+					</tr>
+					<tr>
+						<td> Backup Programmer: </td>
+						<td> Michael Chen </td>
+					</tr>
 
-	</table>
-<br>
-Students of James Ruse Agricultural High School
-<br>
-		  <br>
-For Feedback, send messages to ruseutilitiesgroup@gmail.com  
-<br>
-		  <b>If you want to try out Early Release, the first <b>75</b> people can sign up using <a href="https://forms.gle/75nfRgVN346i75jU8" target="_blank">https://forms.gle/75nfRgVN346i75jU8</a></b></p>
-</div>
+				</table>
+				<br>
+				Students of James Ruse Agricultural High School
+				<br>
+				<br>
+				For Feedback, send messages to ruseutilitiesgroup@gmail.com  
+				<br>
+				<b>If you want to try out Early Release, the first <b>75</b> people can sign up using <a href="https://forms.gle/75nfRgVN346i75jU8" target="_blank">https://forms.gle/75nfRgVN346i75jU8</a></b></p>
+			</div>
+		</main>
 
-  </main>
-<footer>
-	<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
-</footer>
-
-	
-
-</body>
+		<footer>
+			<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
+		</footer>
+	</body>
 </html>
