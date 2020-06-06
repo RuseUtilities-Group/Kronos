@@ -48,6 +48,7 @@ function timeStringToMS(timeString) {
 }
 function gen_table(json) {
 	table = document.getElementById("times");
+	console.log(table);
 	tstr = "";
 	it = json.timetableData[dateNamesTo[day()].toLowerCase() + week()]
 	if (it === undefined) {
@@ -102,10 +103,39 @@ let xhr = new XMLHttpRequest();
 xhr.responseType = 'json';
 xhr.open('GET', jsonPath + 'bellTimes.json', true);
 xhr.onload = function () {
-	json = xhr.response;
+	if (localStorage.getItem("personalTimetable") === null) {
+		json = xhr.response;
+	}
+	else {
+		json = JSON.parse(localStorage.getItem("personalTimetable"));
+	}
+	console.log(json);
 	gen_table(json);
 	updateDay();
 	update(json);
 	window.setInterval(update, 1000);
 };
 xhr.send();
+
+// if (localStorage.getItem("personalTimetable") === null) {
+// 	let xhr = new XMLHttpRequest();
+// 	xhr.responseType = 'json';
+// 	xhr.open('GET', jsonPath + 'bellTimes.json', true);
+// 	xhr.onload = function () {
+// 		json = xhr.response;
+// 		console.log(json);
+// 		gen_table(json);
+// 		updateDay();
+// 		update(json);
+// 		window.setInterval(update, 1000);
+// 	};
+// 	xhr.send();
+// }
+// else {
+// 	json = JSON.parse(localStorage.getItem("personalTimetable"));
+// 	console.log(json);
+// 	gen_table(json);
+// 	updateDay();
+// 	update(json);
+// 	window.setInterval(update, 1000);
+// }
