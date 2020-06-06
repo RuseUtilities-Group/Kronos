@@ -123,7 +123,7 @@ xhr.send();
 // 	xhr.open('GET', jsonPath + 'bellTimes.json', true);
 // 	xhr.onload = function () {
 // 		json = xhr.response;
-// 		console.log(json);
+// 		// console.log(json);
 // 		gen_table(json);
 // 		updateDay();
 // 		update(json);
@@ -132,10 +132,10 @@ xhr.send();
 // 	xhr.send();
 // }
 // else {
-// 	json = JSON.parse(localStorage.getItem("personalTimetable"));
-// 	console.log(json);
-// 	gen_table(json);
+// 	personalTimetable = JSON.parse(localStorage.getItem("personalTimetable"));
+// 	// console.log(json);
+// 	gen_table(personalTimetable);
 // 	updateDay();
-// 	update(json);
+// 	update(personalTimetable);
 // 	window.setInterval(update, 1000);
 // }

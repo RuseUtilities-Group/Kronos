@@ -37,14 +37,14 @@ async function icalProcess() {
 		//Wait for icalParse() to finish
 		var jcalData = await icalParse();
 		var jsonData = await getTemplate();
-		console.log(jsonData);
+		// console.log(jsonData);
 
 		//Extract events (i.e periods) from jcal
 		var jcalDataComp = new ICAL.Component(jcalData);
 		var events = jcalDataComp.getAllSubcomponents("vevent");
 
-		console.log(jcalData);
-		console.log(events);
+		// console.log(jcalData);
+		// console.log(events);
 
 		//IMPORTANT:
 		//	Sentral starts the timetable from wednesday week A
@@ -111,9 +111,11 @@ async function icalProcess() {
 			// jsonData.timetableData[listOfDays[curDay]][`Period ${period}`];
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].startTime = `${hours}:${minute.toString().padStart(2, '0')}`;
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
+			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].teacher = teacher;
+			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].room = room;
 
-			console.log(periodStart);
-			console.log(periodEnd);
+			// console.log(periodStart);
+			// console.log(periodEnd);
 			// console.log(hours + ":" + minute.toString().padStart(2, '0'));
 			// console.log(Math.abs(periodEnd - periodStart) / (1000 * 60));
 			// console.log(teacher);
@@ -125,7 +127,7 @@ async function icalProcess() {
 
 			// jsonTimetable["teacher"] = events[i].getFirstPropertyValue('description');
 		}
-		console.log(jsonData);
+		// console.log(jsonData);
 		localStorage.setItem("personalTimetable", JSON.stringify(jsonData));
 	} catch(err) {
 		console.log(err);
