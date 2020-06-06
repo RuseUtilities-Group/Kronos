@@ -36,8 +36,8 @@ async function icalProcess() {
 	try {
 		//Wait for icalParse() to finish
 		var jcalData = await icalParse();
-		var timetableData = await getTemplate();
-		console.log(timetableData);
+		var jsonData = await getTemplate();
+		console.log(jsonData);
 
 		//Extract events (i.e periods) from jcal
 		var jcalDataComp = new ICAL.Component(jcalData);
@@ -90,17 +90,7 @@ async function icalProcess() {
 			//Dealing with the location elements
 			var room = lctn.split(": ")[1];
 
-			timetableData[listOfDays[curDay]]["Period: " + period].startTime = `hours : ${minute.toString().padStart(2, '0')}`;
-			timetableData[listOfDays[curDay]]["Period: " + period].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
-
-			// console.log(periodStart);
-			// console.log(hours + ":" + minute.toString().padStart(2, '0'));
-			// console.log(Math.abs(periodEnd - periodStart) / (1000 * 60));
-			// console.log(teacher);
-			// console.log(period);
-			// console.log(room);
-			console.log(listOfDays[curDay]);
-
+			//Bounds check
 			if (Number.isNaN(period)) {
 				prevPeriod = 1000;
 				continue;
@@ -113,10 +103,24 @@ async function icalProcess() {
 				break;
 			}
 
+			// console.log(jsonData.timetableData[listOfDays[curDay]]);
+			// jsonData.timetableData[listOfDays[curDay]][`Period ${period}`];
+			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].startTime = `hours : ${minute.toString().padStart(2, '0')}`;
+			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
+
+			// console.log(periodStart);
+			// console.log(hours + ":" + minute.toString().padStart(2, '0'));
+			// console.log(Math.abs(periodEnd - periodStart) / (1000 * 60));
+			// console.log(teacher);
+			// console.log(period);
+			// console.log(room);
+			// console.log(listOfDays[curDay]);
+
 			prevPeriod = period;
 
 			// jsonTimetable["teacher"] = events[i].getFirstPropertyValue('description');
 		}
+		console.log(jsonData);
 	} catch(err) {
 		console.log(err);
 	}
