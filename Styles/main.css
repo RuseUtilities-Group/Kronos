@@ -371,7 +371,7 @@ td {
 }
 
 
-#link {
+.link {
 	padding-top:10px !important;
 	color: gold; 
 	text-decoration: none;
