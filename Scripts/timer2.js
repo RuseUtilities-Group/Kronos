@@ -3,6 +3,7 @@ let jsonPath = 'Scripts/';
 let times = [];
 let today = new Date();
 let jan1 = new Date();
+let addDetails = false;
 jan1.setMonth(0);
 jan1.setDate(1);
 jan1.setHours(0,0,0,0);
@@ -50,7 +51,7 @@ function gen_table(json) {
 	table = document.getElementById("times");
 	console.log(table);
 	tstr = "";
-	it = json.timetableData[dateNamesTo[day()].toLowerCase() + week()]
+	it = json.timetableData[dateNamesTo[day()].toLowerCase() + week()];
 	if (it === undefined) {
 		console.log ("Uh oh");
 		it = {};
@@ -59,6 +60,9 @@ function gen_table(json) {
 	for(const [k, v] of Object.entries(it)) {
 		tstr += "<tr><td>";
 		tstr += k;
+		if(addDetails && v.room != "") {
+			tstr += `: ${v.subject}<br>at ${v.room} with ${v.teacher}`;
+		}
 		tstr += "</td><td>";
 		tstr += v.startTime;
 		tstr += "</td></tr>";
@@ -108,6 +112,7 @@ xhr.onload = function () {
 	}
 	else {
 		json = JSON.parse(localStorage.getItem("personalTimetable"));
+		addDetails = true;
 	}
 	console.log(json);
 	gen_table(json);
@@ -116,26 +121,3 @@ xhr.onload = function () {
 	window.setInterval(update, 1000);
 };
 xhr.send();
-
-// if (localStorage.getItem("personalTimetable") === null) {
-// 	let xhr = new XMLHttpRequest();
-// 	xhr.responseType = 'json';
-// 	xhr.open('GET', jsonPath + 'bellTimes.json', true);
-// 	xhr.onload = function () {
-// 		json = xhr.response;
-// 		// console.log(json);
-// 		gen_table(json);
-// 		updateDay();
-// 		update(json);
-// 		window.setInterval(update, 1000);
-// 	};
-// 	xhr.send();
-// }
-// else {
-// 	personalTimetable = JSON.parse(localStorage.getItem("personalTimetable"));
-// 	// console.log(json);
-// 	gen_table(personalTimetable);
-// 	updateDay();
-// 	update(personalTimetable);
-// 	window.setInterval(update, 1000);
-// }

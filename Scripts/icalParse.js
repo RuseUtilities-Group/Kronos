@@ -37,7 +37,7 @@ async function icalProcess() {
 		//Wait for icalParse() to finish
 		var jcalData = await icalParse();
 		var jsonData = await getTemplate();
-		// console.log(jsonData);
+		console.log(jcalData);
 
 		//Extract events (i.e periods) from jcal
 		var jcalDataComp = new ICAL.Component(jcalData);
@@ -70,6 +70,7 @@ async function icalProcess() {
 			var eventStart = events[i].getFirstPropertyValue('dtstart');
 			var eventEnd = events[i].getFirstPropertyValue('dtend');
 			var description = events[i].getFirstPropertyValue('description');
+			var summary = events[i].getFirstPropertyValue('summary');
 			var lctn = events[i].getFirstPropertyValue('location');
 
 			//Dealing with time
@@ -91,6 +92,9 @@ async function icalProcess() {
 			var teacher = tAndP[0].split("  ")[1];
 			var period = parseInt(tAndP[1].split(" p.")[1], 10);
 
+			//Dealing with the summary elements
+			var subject = summary.split(": ")[1];
+
 			//Dealing with the location elements
 			var room = lctn.split(": ")[1];
 
@@ -109,17 +113,21 @@ async function icalProcess() {
 
 			// console.log(jsonData.timetableData[listOfDays[curDay]]);
 			// jsonData.timetableData[listOfDays[curDay]][`Period ${period}`];
+			if(curDay % 5 == 0 && period > 4) {
+				console.log("what")
+			}
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].startTime = `${hours}:${minute.toString().padStart(2, '0')}`;
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].teacher = teacher;
+			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].subject = subject;
 			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].room = room;
 
 			// console.log(periodStart);
 			// console.log(periodEnd);
 			// console.log(hours + ":" + minute.toString().padStart(2, '0'));
 			// console.log(Math.abs(periodEnd - periodStart) / (1000 * 60));
-			// console.log(teacher);
 			// console.log(period);
+			// console.log(teacher);
 			// console.log(room);
 			// console.log(listOfDays[curDay]);
 
@@ -127,8 +135,12 @@ async function icalProcess() {
 
 			// jsonTimetable["teacher"] = events[i].getFirstPropertyValue('description');
 		}
-		// console.log(jsonData);
+		console.log(jsonData);
 		localStorage.setItem("personalTimetable", JSON.stringify(jsonData));
+		if (localStorage.getItem("personalTimetable") !== null) {
+			var timetable = document.getElementById("timetableDiv");
+			document.getElementById("timetableDiv").style.display = "initial";
+		}
 	} catch(err) {
 		console.log(err);
 	}
