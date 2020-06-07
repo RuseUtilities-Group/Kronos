@@ -8,7 +8,7 @@ body{
 /*Ruse Logo on Every Page Bottom Right Corner*/
 #ruselogo{
 	width: 96px;
-	position: absolute;
+	position: sticky;
         right: 0px;
         bottom: 0px;
 	opacity: 0.5;
@@ -21,9 +21,7 @@ body{
 	height: 70%;
 	margin-left: 15%;
 }
-a:visited {
-  color: blue;
-}
+
 a:hover{
   opacity: 0.7;
 }
