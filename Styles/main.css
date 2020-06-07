@@ -348,11 +348,12 @@ td {
 /*CSS For Alert Buttons LOOOL*/
 .alert {
   padding: 20px;
-  margin-bottom: 1px !important;
+  margin-bottom: 1px;
   background-color: gold;
   color: var(--primary-color);
   margin-top: 200px;
   width: 85%;
+  position: absolute;
 }
 
 .closebtn {
