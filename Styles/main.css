@@ -8,7 +8,7 @@ body{
 /*Ruse Logo on Every Page Bottom Right Corner*/
 #ruselogo{
 	width: 96px;
-	position: sticky;
+	position: absolute;
         right: 0px;
         bottom: 0px;
 	opacity: 0.5;
