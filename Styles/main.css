@@ -336,6 +336,8 @@ td {
 #timetableTd2 {
 	width: auto;
 	vertical-align: top;
+	padding-right: 10px !important;
+	padding-top: 10px !important;
 }
 
 .css-top-inside {
