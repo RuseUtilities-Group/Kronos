@@ -58,12 +58,12 @@ function gen_table(json) {
 	}
 
 	for(const [k, v] of Object.entries(it)) {
-		tstr += "<tr><td>";
+		tstr += "<tr><td id=\"time1\">";
 		tstr += k;
 		if(addDetails && v.room != "") {
-			tstr += `: ${v.subject}<br>at ${v.room} with ${v.teacher}`;
+			tstr += `: ${v.subject}<br><div id="timeSubtext">at ${v.room} with ${v.teacher}<div>`;
 		}
-		tstr += "</td><td>";
+		tstr += "</td><td id=\"time2\">";
 		tstr += v.startTime;
 		tstr += "</td></tr>";
 		times.push({periodName: k, timeFrom: timeStringToMS(v.startTime)});
