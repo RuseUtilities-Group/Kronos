@@ -288,8 +288,8 @@ input:checked + .slider:before {
 /*Bells.html Timer CSS Table Fix Up The Ugly Design*/
 
 td {
-    padding-right: 100px;
-    padding-top: 20px;
+    padding-right: 100px !important;
+    padding-top: 20px !important;
       }
 
 #times{
