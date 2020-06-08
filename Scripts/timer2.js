@@ -61,7 +61,7 @@ function gen_table(json) {
 		tstr += "<tr><td id=\"time1\">";
 		tstr += k;
 		if(addDetails && v.room != "") {
-			tstr += `: ${v.subject}<br><div id="timeSubtext">at ${v.room} with ${v.teacher}<div>`;
+			tstr += `: ${v.subject}<br><div class="timeSubtext">at ${v.room} with ${v.teacher}<div>`;
 		}
 		tstr += "</td><td id=\"time2\">";
 		tstr += v.startTime;
