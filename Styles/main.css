@@ -25,6 +25,9 @@ body{
 a:hover{
   opacity: 0.7;
 }
+a{
+	text-decoration: none;
+}
 /*CSS for the Logo on Index.Html*/
 #logo{
   width: 200px;
@@ -204,7 +207,9 @@ input:checked + .slider:before {
   padding-bottom: 30px;
 }
 
-
+#linksDiv {
+  padding-bottom: 30px;
+}
 
 #homeIcon {
   padding-right: 50px;
@@ -343,11 +348,12 @@ td {
 /*CSS For Alert Buttons LOOOL*/
 .alert {
   padding: 20px;
-  margin-bottom: 1px !important;
+  margin-bottom: 1px;
   background-color: gold;
   color: var(--primary-color);
   margin-top: 200px;
   width: 85%;
+  position: absolute;
 }
 
 .closebtn {
@@ -366,7 +372,11 @@ td {
 }
 
 
-
+.link {
+	padding-top:10px !important;
+	color: gold; 
+	text-decoration: none;
+}
 
 
 
