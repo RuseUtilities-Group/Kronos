@@ -137,10 +137,7 @@ async function icalProcess() {
 		}
 		console.log(jsonData);
 		localStorage.setItem("personalTimetable", JSON.stringify(jsonData));
-		if (localStorage.getItem("personalTimetable") !== null) {
-			var timetable = document.getElementById("timetableDiv");
-			document.getElementById("timetableDiv").style.display = "initial";
-		}
+		window.location.href = "/timetable.html";
 	} catch(err) {
 		console.log(err);
 	}
