@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
-	<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
-	<title>Staff List</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	  
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
+		<title>Staff List</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	</head>
 
-	
-<body>
-	
-	
-<header>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
-		.nono {
-			display: none;
-		}
-	</style>
-<!-- The sidebar --> 
-<div class="sidebar">
-  <a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
-  <a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
-	<a href="./timetable.html" id="settingsDiv"><i class="fa fa-fw fa-book" id="settingsIcon"></i>Timetable</a>
-    <a href="./calendar.html" id="classesDiv" style="margin-top: 15px"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
-	   <a href="./links.html" id="linksDiv"><i class="fa fa-fw fa-link" id="settingsIcon"></i>Links</a>
-	 <a href="./staff.html" id="settingsDiv" style="color: #D4AF37 !important"><i class="fa fa-fw fa-user" id="settingsIcon"></i>Staff List</a>
-  <a href="./settings.html" id="settingsDiv" style="margin-top: 15px"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
+	<body>
+		<header>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<style>
+				.nono {
+					display: none;
+				}
+			</style>
+			<!-- The sidebar --> 
+			<div class="sidebar" id="pageSidebar">
+				<a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
+				<a href="./timetable.html" id="timetableDiv" style="display:none;"><i class="fa fa-fw fa-arrow-up" id="timetableIcon"></i>Timetable</a>
+				<script type="text/javascript" src="/Scripts/showTimetable.js"></script>  
+				<a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
+				<a href="./calendar.html" id="classesDiv" style="color: #D4AF37 !important"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
+				<a href="./upload.html" id="settingsDiv"><i class="fa fa-fw fa-arrow-up" id="settingsIcon"></i>Upload Timetable</a>
+				<a href="./links.html" id="linksDiv"><i class="fa fa-fw fa-link" id="settingsIcon"></i>Links</a>
+				<a href="./staff.html" id="settingsDiv"><i class="fa fa-fw fa-user" id="settingsIcon"></i>Staff List</a>
+				<a href="./settings.html" id="settingsDiv" style="margin-top: 15px"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
+			</div>
+		</header>
 
+		<main style="text-align:center">
+			<h3 style="margin-right:430px">Please remember to be respectful when emailing your teachers!</h3>
+			<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsQ9se1S7OHUMeodVpnLeo8B_gQHJmS808xDAQ-IfTMqXbmFwTDVwWX4EraK17tB5a0DYSMISxcOLn/pubhtml?widget=true&amp;headers=false" width=950px height=720px></iframe>
+		</main>
+		<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
+		<footer>
+			<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
 
-</div>
+		</footer>
 
-</header>
- 
-
-
-
-  <main style="text-align:center">
-	  <h3 style="margin-right:430px">Please remember to be respectful when emailing your teachers!</h3>
-	  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRsQ9se1S7OHUMeodVpnLeo8B_gQHJmS808xDAQ-IfTMqXbmFwTDVwWX4EraK17tB5a0DYSMISxcOLn/pubhtml?widget=true&amp;headers=false" width=950px height=720px></iframe>
-</main>
-<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
-<footer>
-	<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
-	
-</footer>
-
-</body>
+	</body>
 </html>
