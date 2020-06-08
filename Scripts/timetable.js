@@ -18,7 +18,7 @@ function gen_table(json) {
 			tableIn += "<tr id=\"Weeks\">";
 		}
 		tableIn += "<td id=\"timetableTd\"><table id=\"timetableDay\">";
-		tableIn += `<tr><th>${listOfDays[day].substring(0, listOfDays[day].length-1)}</th></tr>`;
+		tableIn += `<tr><th>${listOfDays[day].substring(0, listOfDays[day].length-1)[0].toUpperCase() + listOfDays[day].substring(0, listOfDays[day].length-1).slice(1)}</th></tr>`;
 		period = 1;
 		while(typeof it[listOfDays[day]][`Period ${period}`] != "undefined") {
 			tableIn += "<tr>";
