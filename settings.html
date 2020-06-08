@@ -44,6 +44,7 @@
 				<script type="text/javascript">
 					function deleteTimetable() {
 						localStorage.removeItem("personalTimetable");
+						document.getElementById("timetableDiv").href = "./upload.html"
 						alert("We have removed your timetable from the database.")
 					}
 				</script>
