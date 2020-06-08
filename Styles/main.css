@@ -316,14 +316,25 @@ td {
 }
 
 #timetable {
-	width = 100%;
+	position: relative;
+	left: 10%;
+	overflow-x:scroll;
+	width: 80%;
+	display: block;
+	padding: 1px;
+}
+
+#timetableDay {
+	padding: 1px;
 }
 
 #timetableTd {
+	width: auto;
 	vertical-align: top;
 }
 
 #timetableTd2 {
+	width: auto;
 	vertical-align: top;
 }
 

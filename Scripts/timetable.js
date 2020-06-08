@@ -15,7 +15,7 @@ function gen_table(json) {
 	var room;
 	for(var day = 0; day < 10; day++) {
 		if(day % 5 == 0) {
-			tableIn += "<tr id=\"Week A\">";
+			tableIn += "<tr id=\"Weeks\">";
 		}
 		tableIn += "<td id=\"timetableTd\"><table id=\"timetableDay\">";
 		period = 1;
@@ -28,15 +28,15 @@ function gen_table(json) {
 			room = it[listOfDays[day]][`Period ${period}`].room;
 
 			if(teacher != "") {
-				tableIn += `<td id="timetableTd2">Period ${period}: ${subject}<br>in ${room} with ${teacher}</td>`;
+				tableIn += `<td id="timetableTd1">Period ${period}: ${subject}<br>in ${room} with ${teacher}</td>`;
 			}
 			else if (room == "sport"){
-				tableIn += `<td id="timetableTd2">Sports</td>`;
+				tableIn += `<td id="timetableTd1">Sports</td>`;
 			}
 			else {
-				tableIn += `<td id="timetableTd2">Free Period</td>`;
+				tableIn += `<td id="timetableTd1">Free Period</td>`;
 			}
-			tableIn += `<td>${startTime}</td>`;
+			tableIn += `<td id="startTimeTd">${startTime}</td>`;
 
 			// console.log(startTime);
 			// console.log(teacher);
@@ -52,13 +52,13 @@ function gen_table(json) {
 			if((day % 5 != 2 && period == 3) || (day % 5 == 2 && period == 2)) {
 				startTime = it[listOfDays[day]]["Recess"].startTime;
 				tableIn += `<tr><td>Recess</td>`;
-				tableIn += `<td>${startTime}</td>`;
+				tableIn += `<td id="startTimeTd">${startTime}</td>`;
 				tableIn += "</tr>";
 			}
 			if((day % 5 != 2 && period == 5) || (day % 5 == 2 && period == 4)) {
 				startTime = it[listOfDays[day]]["Lunch"].startTime;
 				tableIn += `<tr><td>Lunch</td>`;
-				tableIn += `<td>${startTime}</td>`;
+				tableIn += `<td id="startTimeTd">${startTime}</td>`;
 				tableIn += "</tr>";
 			}
 			period++;
