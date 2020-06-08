@@ -1,4 +1,4 @@
 if (localStorage.getItem("personalTimetable") !== null) {
-	document.getElementById("timetableDiv").style.display = "initial";
-	// sidebar.style.display = "block";
+	var timetable = document.getElementById("timetableDiv");
+	timetable.href = "./https://rusekronos.xyz/timetable"
 }
