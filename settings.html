@@ -42,10 +42,12 @@
 			<div class="theme-switch-wrapper"> 
 				<em style="padding-right: 20px">Delete Data</em>
 				<script type="text/javascript">
-					localStorage.removeItem("personalTimetable");
-					alert("We have removed your timetable from the database.")
+					function deleteTimetable() {
+						localStorage.removeItem("personalTimetable");
+						alert("We have removed your timetable from the database.")
+					}
 				</script>
-				<input type="button" id="deleeTimebox" value="Delete" onClick=""/>
+				<input type="button" id="deleeTimebox" value="Delete" onClick="deleteTimetable()"/>
 				<br>
 				<em style="padding-right: 20px">Night Mode</em>
 				<label class="theme-switch" for="checkbox">
