@@ -2,7 +2,7 @@ var listOfDays = ['mondayA', 'tuesdayA', 'wednesdayA', 'thursdayA', 'fridayA', '
 
 function gen_table(json) {
 	table = document.getElementById("timetable");
-	tstr = "";
+	tableIn = "";
 	it = json.timetableData;
 	if (it === undefined) {
 		console.log ("Uh oh");
@@ -15,60 +15,61 @@ function gen_table(json) {
 	var room;
 	for(var day = 0; day < 10; day++) {
 		if(day % 5 == 0) {
-			tstr += "<tr>";
+			tableIn += "<tr id=\"Week A\">";
 		}
-		tstr += "<td id=\"timetableTd\"><table>";
+		tableIn += "<td id=\"timetableTd\"><table id=\"timetableDay\">";
 		period = 1;
 		while(typeof it[listOfDays[day]][`Period ${period}`] != "undefined") {
-			tstr += "<tr>";
-			// tstr += `<td></td>`;
+			tableIn += "<tr>";
+			// tableIn += `<td></td>`;
 			startTime = it[listOfDays[day]][`Period ${period}`].startTime;
 			teacher = it[listOfDays[day]][`Period ${period}`].teacher;
 			subject = it[listOfDays[day]][`Period ${period}`].subject;
 			room = it[listOfDays[day]][`Period ${period}`].room;
 
 			if(teacher != "") {
-				tstr += `<td id="timetableTd2">Period ${period}: ${subject}<br>in ${room} with ${teacher}</td>`;
+				tableIn += `<td id="timetableTd2">Period ${period}: ${subject}<br>in ${room} with ${teacher}</td>`;
 			}
 			else if (room == "sport"){
-				tstr += `<td id="timetableTd2">Sports</td>`;
+				tableIn += `<td id="timetableTd2">Sports</td>`;
 			}
 			else {
-				tstr += `<td id="timetableTd2">Free Period</td>`;
+				tableIn += `<td id="timetableTd2">Free Period</td>`;
 			}
-			tstr += `<td>${startTime}</td>`;
+			tableIn += `<td>${startTime}</td>`;
 
 			// console.log(startTime);
 			// console.log(teacher);
 			// console.log(room);
 
-			// tstr += "<tr><td>";
-			// tstr += "";
-			// tstr += "</td><td>";
-			// tstr += v.startTime;
-			// tstr += "</td></tr>";
-			tstr += "</tr>";
+			// tableIn += "<tr><td>";
+			// tableIn += "";
+			// tableIn += "</td><td>";
+			// tableIn += v.startTime;
+			// tableIn += "</td></tr>";
+			tableIn += "</tr>";
+
 			if((day % 5 != 2 && period == 3) || (day % 5 == 2 && period == 2)) {
 				startTime = it[listOfDays[day]]["Recess"].startTime;
-				tstr += `<td>Recess</td>`;
-				tstr += `<td>${startTime}</td>`;
-				tstr += "</tr>";
+				tableIn += `<tr><td>Recess</td>`;
+				tableIn += `<td>${startTime}</td>`;
+				tableIn += "</tr>";
 			}
 			if((day % 5 != 2 && period == 5) || (day % 5 == 2 && period == 4)) {
 				startTime = it[listOfDays[day]]["Lunch"].startTime;
-				tstr += `<td>Lunch</td>`;
-				tstr += `<td>${startTime}</td>`;
-				tstr += "</tr>";
+				tableIn += `<tr><td>Lunch</td>`;
+				tableIn += `<td>${startTime}</td>`;
+				tableIn += "</tr>";
 			}
 			period++;
 		}
-		tstr += `<tr><td>End of Day</td><td>${it[listOfDays[day]]["End of Day"].startTime}</td></tr>`
-		tstr += "</table></td>";
-		if(day % 5 == 0) {
-			tstr += "</tr>";
+		tableIn += `<tr><td>End of Day</td><td>${it[listOfDays[day]]["End of Day"].startTime}</td></tr>`
+		tableIn += "</table></td>";
+		if(day % 5 == 4) {
+			tableIn += "</tr>";
 		}
 	}
-	table.innerHTML = tstr;
+	table.innerHTML = tableIn;
 }
 
 if (localStorage.getItem("personalTimetable") === null) {
