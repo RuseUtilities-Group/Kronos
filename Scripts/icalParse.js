@@ -4,6 +4,10 @@ function icalParse() {
 	// var icalFile = localStorage.getItem("icalFile")
 
 	const file = document.getElementById('myFile').files[0];
+	if(file.size > 100000) {
+		alert("File is too large.");
+		return;
+	}
 
 	return new Promise((resolve, reject) => {
 		const fileReader = new FileReader();
