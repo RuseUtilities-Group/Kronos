@@ -100,7 +100,12 @@ function update(json) {
 		tt = timeTil();
 	}
 	timer.innerHTML = timeTilHMS();
-	period.innerHTML = times[next].periodName;
+	if(json.timetableData[dateNamesTo[day()].toLowerCase() + week()][times[next].periodName].subject != "") {
+		period.innerHTML = `${times[next].periodName}: ${json.timetableData[dateNamesTo[day()].toLowerCase() + week()][times[next].periodName].subject}`;
+	}
+	else {
+		period.innerHTML = times[next].periodName;
+	}
 }
 
 let xhr = new XMLHttpRequest();
