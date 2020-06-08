@@ -319,7 +319,7 @@ width: 500px;
 #timetable {
 	position: relative;
 	left: 10%;
-	overflow-x:scroll;
+	/* overflow-x:scroll; */
 	width: 80%;
 	display: block;
 	padding: 1px;
