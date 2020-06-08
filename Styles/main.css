@@ -315,6 +315,22 @@ td {
   font-size: 15px;
 }
 
+#timetable {
+	width = 100%;
+}
+
+#timetableTd {
+	vertical-align: top;
+}
+
+#timetableTd2 {
+	vertical-align: top;
+}
+
+.css-top-inside {
+	text-align: left;
+}
+
 .css-centre-outside {
   text-align: center;
   padding-top: 40;

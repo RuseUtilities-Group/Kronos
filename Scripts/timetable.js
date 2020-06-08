@@ -17,7 +17,7 @@ function gen_table(json) {
 		if(day % 5 == 0) {
 			tstr += "<tr>";
 		}
-		tstr += "<table>";
+		tstr += "<td id=\"timetableTd\"><table>";
 		period = 1;
 		while(typeof it[listOfDays[day]][`Period ${period}`] != "undefined") {
 			tstr += "<tr>";
@@ -28,13 +28,13 @@ function gen_table(json) {
 			room = it[listOfDays[day]][`Period ${period}`].room;
 
 			if(teacher != "") {
-				tstr += `<td>Period ${period}: ${subject}<br>in ${room} with ${teacher}</td>`;
+				tstr += `<td id="timetableTd2">Period ${period}: ${subject}<br>in ${room} with ${teacher}</td>`;
 			}
 			else if (room == "sport"){
-				tstr += `<td>Sports</td>`;
+				tstr += `<td id="timetableTd2">Sports</td>`;
 			}
 			else {
-				tstr += `<td>Free Period</td>`;
+				tstr += `<td id="timetableTd2">Free Period</td>`;
 			}
 			tstr += `<td>${startTime}</td>`;
 
@@ -63,7 +63,7 @@ function gen_table(json) {
 			period++;
 		}
 		tstr += `<tr><td>End of Day</td><td>${it[listOfDays[day]]["End of Day"].startTime}</td></tr>`
-		tstr += "</table>";
+		tstr += "</table></td>";
 		if(day % 5 == 0) {
 			tstr += "</tr>";
 		}
