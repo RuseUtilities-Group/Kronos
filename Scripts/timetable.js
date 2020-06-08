@@ -75,7 +75,7 @@ function gen_table(json) {
 
 if (localStorage.getItem("personalTimetable") === null) {
 	alert("You have not uploaded a timetable, and appear \nto have reached this location by accident. \nWe are escorting you back to the main page. \n\n\nPlease do not resist.");
-	window.location.href = "./index.html";
+	window.location.href = "./upload.html";
 }
 else {
 	json = JSON.parse(localStorage.getItem("personalTimetable"));
