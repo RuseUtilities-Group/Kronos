@@ -8,7 +8,14 @@ function icalParse() {
 	return new Promise((resolve, reject) => {
 		const fileReader = new FileReader();
 		fileReader.onloadend = function(e) {
-			resolve(ICAL.parse(e.target.result));
+			var data;
+			try {
+				data = ICAL.parse(e.target.result);
+			}
+			catch(err) {
+				alert("Your file appears to be invalid. \nPlease try again");
+			}
+			resolve(data);
 		};
 		fileReader.onerror = function(e) {
 			reject(e);
