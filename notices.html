@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="./Styles/main.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="./Styles/images/kronosicon.jpg" type="image/icon type">
+		<title>Links</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168347540-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-168347540-1');
+		</script>	  
+	</head>
+
+	<body>
+		<header>
+
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<style>
+				.nono {
+					display: none;
+				}
+			</style>
+			<head>
+				<!-- The sidebar --> 
+				<div class="sidebar">
+					<a href="./index.html" id="homeDiv"><i class="fa fa-fw fa-home" id="homeIcon"></i>Home</a> 
+					<a href="./times.html" id="loginDiv"><i class="fa fa-fw fa-bell" id="loginIcon"></i>Bell Times</a>
+					<a href="./upload.html" id="timetableDiv"><i class="fa fa-fw fa-book" id="settingsIcon"></i>Timetable</a>
+					<a href="./calendar.html" id="classesDiv" style="margin-top: 15px"><i class="fa fa-fw fa-calendar" id="classesIcon"></i>School Calendar</a>
+					<a href="./links.html" id="linksDiv" style="color: #D4AF37 !important"><i class="fa fa-fw fa-link" id="settingsIcon"></i>Links</a>
+					<a href="./staff.html" id="settingsDiv"><i class="fa fa-fw fa-user" id="settingsIcon"></i>Staff List</a>
+					<a href="./settings.html" id="settingsDiv" style="margin-top: 15px"><i class="fa fa-fw fa-cog" id="settingsIcon"></i>Settings</a>
+
+					<script type="text/javascript" src="/Scripts/showTimetable.js"></script>  
+				</div>
+		</header>
+
+		<main style="text-align:center; padding-left: 50px">
+
+			 <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-left-align">
+Open Section 1</button>
+
+<div id="Demo1" class="w3-container w3-hide">
+  <p>Some text..</p>
+</div>
+
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script> 
+			<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
+		</main>
+		<footer>
+			<img src="./Styles/images/ruselogo.png" alt="JRAHS Logo" id="ruselogo">
+
+
+		</footer>
+
+	</body>
+</html>
