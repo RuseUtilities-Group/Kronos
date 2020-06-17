@@ -1,0 +1,420 @@
+
+/*CSS for the Every Page's Body Area*/
+body{
+	color: var(--primary-color); 
+	background-color: var(--bg-color); 
+	font-family: Roboto, sans-serif;
+}
+/*Ruse Logo on Every Page Bottom Right Corner*/
+#ruselogo{
+	width: 96px;
+	position: absolute;
+        right: 0px;
+        bottom: 0px;
+	opacity: 0.5;
+}
+/*CSS for the Container Area on Index.Html*/
+#container{
+  margin-top: 5%;
+	text-align: center;
+	width: 70%;
+	height: 70%;
+	margin-left: 15%;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+a{
+	text-decoration: none;
+}
+/*CSS for the Logo on Index.Html*/
+#logo{
+  width: 200px;
+	text-align: center
+  margin-bottom: -100px;
+}
+
+/*CSS for the build model block in Index.Html*/
+#build{
+	text-align: center;
+	display: inline-block;
+    padding: 0 10px;
+    background: gold !important;
+    line-height: 1.5;
+    font-size: .875rem;
+    color: grey !important;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+/*CSS for the  Enter Classes Button in Index.Html*/
+.buttonEnterClasses{
+  font-family: Roboto, sans-serif !important;
+  text-align: center;
+  background-color: gold !important;
+  color: grey !important;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 5px;
+    overflow: visible;
+    font-family: Helvetica, sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-transform: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 30px;
+    vertical-align: middle;
+    font-size: .875rem;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    transition-property: all;
+    transition-property: color,background-color,border-color; 
+    touch-action: manipulation;
+}
+
+.buttonEnterClasses a:hover {
+  opacity:1;
+}
+
+  
+/*Sidebar Style*/
+.sidebar {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 16px;
+  margin-top: 1px;
+  font-family: Roboto, sans-serif;
+}
+
+/*Sidebar Button Styles*/
+.sidebar a {
+  padding: 13.5px 18px 13.5px 24px;
+  text-decoration: none;
+  font-size: 20px;
+  color: gold;
+  display: block;
+}
+
+/*hover Animations for sidebar buttons*/
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/*Sidebar Collection Area Paddings and Margins*/
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+* {box-sizing: border-box}
+
+/*End Sidebar CSS*/
+
+/* The Slider Switch for Theme Change on Settings.Html*/
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  
+
+    margin-left: 650px;
+    margin-top: 50px;
+    font-size: 1rem;
+
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #FFD700;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Sidebar Hype */
+
+#homeDiv {
+  padding-bottom: 30px;
+}
+
+#classesDiv {
+  padding-bottom: 30px;
+}
+
+#loginDiv {
+  padding-bottom: 30px;
+}
+
+#linksDiv {
+  padding-bottom: 30px;
+}
+
+#homeIcon {
+  padding-right: 50px;
+}
+
+#classesIcon {
+  padding-right: 50px;
+}
+
+#loginIcon {
+  padding-right: 50px;
+}
+
+#settingsIcon{
+  padding-right: 50px;
+}
+
+/*Data Themes*/
+:root {
+    --primary-color: #222222 !important;
+    --secondary-color: grey !important;
+    --bg-color: white !important;
+}
+
+
+[data-theme="dark"] {
+    --primary-color: white !important;
+    --secondary-color: grey !important;
+    --bg-color: #222222 !important;
+}
+
+/*Data Values for Primary Colors It Doesnt Work LOOOOOOL
+[data-values="1"] {
+    --primary: #FFD700;
+}
+
+[data-theme="2"] {
+    --primary: blue;
+}
+
+[data-theme="3"] {
+    --primary: pink;
+}
+
+[data-theme="4"] {
+    --primary: purple;
+}
+
+[data-theme="5"] {
+    --primary: darkblue;
+}
+
+[data-theme="6"] {
+    --primary: aqua;
+}
+
+[data-theme="7"] {
+    --primary: lightgreen;
+}
+
+[data-theme="8"] {
+    --primary: darkgreen;
+}
+
+[data-theme="9"] {
+    --primary: red;
+}*/
+
+
+/*Settings.Html Primary Colours Styling*/
+.primaryColours{
+  text-align: center;
+
+}
+
+/*Bells.html Timer CSS Table Fix Up The Ugly Design*/
+
+td {
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+      }
+
+#times{
+  text-align: left;
+  margin-left: 7%;
+  font-size: 20px;
+width: 500px;
+
+}
+
+#times1{
+   text-align: left;
+   margin-left: 220;
+   font-size: 20px
+
+}
+
+#timer{
+  font-size: 60px;
+}
+
+#period{
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+#timetable {
+	position: relative;
+	left: 10%;
+	/* overflow-x:scroll; */
+	width: 80%;
+	display: block;
+	padding: 1px;
+}
+
+#timetableDay {
+	padding: 1px;
+}
+
+#timetableTd {
+	width: auto;
+	vertical-align: top;
+}
+
+#timetableTd2 {
+	width: auto;
+	vertical-align: top;
+	padding-right: 10px !important;
+	padding-top: 10px !important;
+}
+
+.css-top-inside {
+	text-align: left;
+}
+
+.css-centre-outside {
+  text-align: center;
+  padding-top: 40;
+}
+
+.css-centre-inside {
+  display: inline-block;
+}
+
+.css-centre-outside1 {
+  text-align: center;
+  padding-top: 40;
+}
+
+.css-centre-inside1 {
+  display: inline-block;
+}
+
+/*Upload Container*/
+.upload{
+  margin-left: 420px !important;
+  font-size: 20px !important;
+  text-align: left !important;
+}
+
+/*Calendar CSS*/
+#calendar{
+  text-align: centre !important;
+  margin-left: 220px !important;
+}
+/*CSS For Alert Buttons LOOOL*/
+.alert {
+  padding: 20px;
+  margin-bottom: 1px;
+  background-color: gold;
+  color: var(--primary-color);
+  margin-top: 200px;
+  width: 85%;
+  position: absolute;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: var(--primary-color);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #D4AF37;
+}
+
+
+.link {
+	padding-top:10px !important;
+	color: gold; 
+	text-decoration: none;
+}
+
+.td1lool {
+	padding-right: 100px !important;
+	padding-top: 20px !important;
+}
+
+.timeSubtext{
+	font-size: 16px;
+}
+
+
