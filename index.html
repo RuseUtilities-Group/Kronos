@@ -43,9 +43,15 @@
       <p style="display:" inline;>useful functions all in one ergonomic website.</p>
 
   </div>
-<script type="text/javascript" src="/Scripts/showTimetable.js"></script> 
+
   <div >
     <a href="./timesNoTimetableDetected.html" id="buttonEnterClasses" style="font: Roboto !important">Enter Bell Times</a> 
+	 <script>
+		 var enter = document.getElementById("buttonEnterClasses");
+	  if (localStorage.getItem("personalTimetable") !== null) {
+	enter.href = "./times.html"
+}
+	  </script>
   </div>
 
 
