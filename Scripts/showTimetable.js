@@ -5,6 +5,7 @@ var enter = document.getElementById("buttonEnterClasses");
 if (localStorage.getItem("personalTimetable") !== null) {
 	timetable.href = "./timetable.html"
 	login.href = "./times.html"
+	enter.href = "./times.html"
 }
 
 if (localStorage.getItem("personalTimetable") === null) {
