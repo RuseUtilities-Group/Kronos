@@ -51,7 +51,7 @@ a{
 }
 
 /*CSS for the  Enter Classes Button in Index.Html*/
-.buttonEnterClasses{
+#buttonEnterClasses{
   font-family: Roboto, sans-serif !important;
   text-align: center;
   background-color: gold !important;
@@ -84,7 +84,7 @@ a{
     touch-action: manipulation;
 }
 
-.buttonEnterClasses a:hover {
+#buttonEnterClasses a:hover {
   opacity:1;
 }
 
