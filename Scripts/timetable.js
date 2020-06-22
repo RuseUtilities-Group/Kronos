@@ -29,7 +29,7 @@ function gen_table(json) {
 			room = it[listOfDays[day]][`Period ${period}`].room;
 
 			if(teacher != "") {
-				tableIn += `<td id="timetableTd1">P${period}: ${subject}<br></td>`;
+				tableIn += `<td id="timetableTd1">P${period}: ${subject} ${room}<br></td>`;
 			}
 			else if (room == "sport"){
 				tableIn += `<td id="timetableTd1">Sports</td>`;
