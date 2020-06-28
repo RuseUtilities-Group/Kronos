@@ -108,6 +108,12 @@ function myFunction(id) {
   }
 }
 </script> 
+			<script>
+	if (localStorage.getItem("personalTimetable") === null) {
+	alert("You have not uploaded an ical timetable, due to school privacy, you are not allowed to see this information.. \nWe are escorting you back to the main page. \n\n\nPlease do not resist.");
+	window.location.href = "./settings.html";
+}
+			</script>
 			<script type="text/javascript" src="./Scripts/settingsTheme.js"></script>  
 		</main>
 		<footer>
