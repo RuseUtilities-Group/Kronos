@@ -13,29 +13,33 @@ Legal Documents: https://rusekronos.xyz/legal.html
 
 ![Kronos Logo](https://rusekronos.xyz/Styles/images/kronosicon.jpg)
 
-Made By The Ruse Utilities Group
 
-Our Team:
 
-Head of Project and Programmer: 	Joshua Koh
+                        Made By The Ruse Utilities Group
 
-General Manager and Programmer: 	Yurui Zi
+                        Our Team:
 
-Head Programmer: 	Chris Ahn
+                        Head of Project and Programmer: 	Joshua Koh
 
-Head Programmer: 	Ethan Du Toit
+                        General Manager and Programmer: 	Yurui Zi
 
-Programmer (App): 	Jerry Li
+                        Head Programmer: 	Chris Ahn
 
-Programmer (App): 	Kyle Zhang
+                        Head Programmer: 	Ethan Du Toit
 
-Chief Marketing Designer: 	Jeremy Yuan
+                        Programmer (App): 	Jerry Li
 
-Marketing Designer and Product Distributor: 	Aaroh Tewani
+                        Programmer (App): 	Kyle Zhang
 
-**Looking for Programmers 	With JS/HTML/CSS/PHP Experience**
+                        Chief Marketing Designer: 	Jeremy Yuan
 
-Students of James Ruse Agricultural High School
+                        Marketing Designer and Product Distributor: 	Aaroh Tewani
+
+                        **Looking for Programmers 	With JS/HTML/CSS/PHP Experience**
+
+                        Students of James Ruse Agricultural High School
+
+
 
 Kronos- A student organiser designed for JRAHS's students and teachers, notifying when to go to class or go to break.
 
