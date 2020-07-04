@@ -37,7 +37,10 @@ Marketing Designer and Product Distributor: 	Aaroh Tewani
 
 Students of James Ruse Agricultural High School
 
+
+
 **Looking for Programmers 	With JS/HTML/CSS/PHP Experience**
+
 
 
 Kronos- A student organiser designed for JRAHS's students and teachers, notifying when to go to class or go to break.
