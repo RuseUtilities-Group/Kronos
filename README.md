@@ -3,6 +3,8 @@ A student organiser designed for JRAHS's students and teachers, notifying when t
 
 Website: https://rusekronos.xyz/
 
+![Kronos Logo](https://rusekronos.xyz/Styles/images/kronosicon.jpg)
+
 Copyright 2020 Ruse Utilities Group
 
 Licensed under the Apache License, Version 2.0 (the "License");
