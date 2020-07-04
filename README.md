@@ -3,8 +3,12 @@
 
 A student organiser designed for JRAHS's students and teachers, notifying when to go to class or go to break, bringing important and useful functions all in one ergonomic website. 
 
+Bug Reports and Feedback: https://docs.google.com/forms/d/e/1FAIpQLSeZ4upAmnRF_fYyMJOuzZxQPL2aiLUY_j4MebOw3kDSUYwslQ/viewform 
+
 Website: https://rusekronos.xyz/
+
 Chrome Extension: https://chrome.google.com/webstore/detail/kronos/olhbpdalnokbaabnlodbcefpfbnjioam?authuser=8&hl=en
+
 Legal Documents: https://rusekronos.xyz/legal.html
 
 ![Kronos Logo](https://rusekronos.xyz/Styles/images/kronosicon.jpg)
