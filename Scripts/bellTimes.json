@@ -793,7 +793,7 @@
 		"subject": "",
 		"room": "",
 		"teacher": "",
-		"startTime": "10:15",
+		"startTime": "10:20",
 		"periodLength": "45"
 	},
 
@@ -801,7 +801,7 @@
 		"subject": "",
 		"room": "",
 		"teacher": "",
-		"startTime": "10:55",
+		"startTime": "11:05",
 		"periodLength": "35"
 	},	
 
@@ -809,7 +809,7 @@
 		"subject": "",
 		"room": "",
 		"teacher": "",
-		"startTime": "11:15",
+		"startTime": "11:35",
 		"periodLength": "45"
 	},
 
@@ -817,7 +817,7 @@
 		"subject": "",
 		"room": "",
 		"teacher": "",
-		"startTime": "11:55",
+		"startTime": "12:20",
 		"periodLength": "45"
 	},
 
@@ -825,7 +825,7 @@
 		"subject": "",
 		"room": "",
 		"teacher": "",
-		"startTime": "12:35",
+		"startTime": "13:05",
 		"periodLength": "30"
 	},
 
