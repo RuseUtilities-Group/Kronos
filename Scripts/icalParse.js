@@ -19,7 +19,7 @@ function icalParse() {
 	// var icalFile = localStorage.getItem("icalFile")
 
 	const file = document.getElementById('myFile').files[0];
-	if(file.size > 100000) {
+	if(file.size > 1000000) {
 		alert("File is too large.");
 		return;
 	}
