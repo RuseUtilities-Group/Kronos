@@ -69,8 +69,8 @@ async function icalProcess() {
 		var jcalDataComp = new ICAL.Component(jcalData);
 		var events = jcalDataComp.getAllSubcomponents("vevent");
 
-		// console.log(jcalData);
-		// console.log(events);
+		console.log(jcalData);
+		console.log(events);
 
 		//IMPORTANT:
 		//	Sentral starts the timetable from wednesday week A
@@ -92,6 +92,7 @@ async function icalProcess() {
 		var prevPeriod = 0;
 
 		for(var i = 0; i < events.length; i++) {
+			// console.log(events[i]);
 			//Read in values from the JSON file
 			var eventStart = events[i].getFirstPropertyValue('dtstart');
 			var eventEnd = events[i].getFirstPropertyValue('dtend');
@@ -130,23 +131,32 @@ async function icalProcess() {
 				continue;
 			}
 			else if(prevPeriod > period) {
+				if(prevPeriod == 4) { 
+					curDay = 6;
+					continue;
+				}
 				curDay += 1;
 			}
 
-			if(!(curDay < 10)) {
+			if(!(curDay < 16)) {
 				break;
 			}
+
+			console.log(i);
+			console.log("day: " + curDay);
+			console.log("period: " + period)
+			console.log("date: " + periodStart.getDay());
 
 			// console.log(jsonData.timetableData[listOfDays[curDay]]);
 			// jsonData.timetableData[listOfDays[curDay]][`Period ${period}`];
 			if(curDay % 5 == 0 && period > 4) {
 				console.log("what")
 			}
-			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].startTime = `${hours}:${minute.toString().padStart(2, '0')}`;
-			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
-			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].teacher = teacher;
-			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].subject = subject;
-			jsonData.timetableData[listOfDays[curDay]][`Period ${period}`].room = room;
+			jsonData.timetableData[listOfDays[curDay%10]][`Period ${period}`].startTime = `${hours}:${minute.toString().padStart(2, '0')}`;
+			jsonData.timetableData[listOfDays[curDay%10]][`Period ${period}`].periodLength = (Math.abs(periodEnd - periodStart) / (1000 * 60)).toString();
+			jsonData.timetableData[listOfDays[curDay%10]][`Period ${period}`].teacher = teacher;
+			jsonData.timetableData[listOfDays[curDay%10]][`Period ${period}`].subject = subject;
+			jsonData.timetableData[listOfDays[curDay%10]][`Period ${period}`].room = room;
 
 			// console.log(periodStart);
 			// console.log(periodEnd);

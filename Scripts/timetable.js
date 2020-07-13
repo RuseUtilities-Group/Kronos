@@ -52,7 +52,7 @@ function gen_table(json) {
 			else {
 				tableIn += `<td id="timetableTd1">Free Period</td>`;
 			}
-			tableIn += `<td id="startTimeTd">${room}</td>`;
+			tableIn += `<td id="startTimeTd">${startTime}</td>`;
 
 			// console.log(startTime);
 			// console.log(teacher);
