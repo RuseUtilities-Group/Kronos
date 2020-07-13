@@ -89,7 +89,8 @@ async function icalProcess() {
 		//	As such, it is tacitly assumed by default they start on Wednesday
 		//	and when the blood moon rises over Saturn another day is chosen.
 		//	In such cases a unique identifying day, Monday week B, with a length
-		//	of 8 periods, is chosen as the starting point.
+		//	of 8 periods, is chosen as the identifier, with the timetable starting
+		//	on the next day, tuesday.
 		//
 		//Additional Notes:
 		//	start time is in .dtstart
@@ -113,8 +114,10 @@ async function icalProcess() {
 			}
 			if(prevPeriod > period) {
 				if(prevPeriod == 8) { 
-					offset = i - 9;
-					listOfDays = ['mondayB', 'tuesdayB', 'wednesdayB', 'thursdayB', 'fridayB', 'mondayA', 'tuesdayA', 'wednesdayA', 'thursdayA', 'fridayA'];
+					//Reset back to first period monday
+					offset = i
+					//Modify the list
+					listOfDays = ['tuesdayB', 'wednesdayB', 'thursdayB', 'fridayB', 'mondayA', 'tuesdayA', 'wednesdayA', 'thursdayA', 'fridayA', 'mondayB'];
 					break;
 				}
 			}
