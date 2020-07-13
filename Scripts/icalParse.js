@@ -73,12 +73,23 @@ async function icalProcess() {
 		console.log(events);
 
 		//IMPORTANT:
-		//	Sentral starts the timetable from wednesday week A
-		//	So keep that in mind when reading the below code
+		// //	Sentral starts the timetable from wednesday week A
+		// //	So keep that in mind when reading the below code
+		// //
+		// //Also the people running sentral are comedians, the dates
+		// //are completely wrong, so I have to work off of the periods
+		// //instead. Comedy as usual.
 		//
-		//Also the people running sentral are comedians, the dates
-		//are completely wrong, so I have to work off of the periods
-		//instead. Comedy as usual.
+		//	SIKE you thought
+		//	Fools sentral does not comply to your mortal demands of
+		//	"consistency" and "reliability" or even "basic correctness".
+		//	They WILL start on whichever day they want and they WILL laugh
+		//	at your foolish attempts to achieve any kind of order.
+		//
+		//	As such, it is tacitly assumed by default they start on Wednesday
+		//	and when the blood moon rises over Saturn another day is chosen.
+		//	In such cases a unique identifying day, Monday week B, with a length
+		//	of 8 periods, is chosen as the starting point.
 		//
 		//Additional Notes:
 		//	start time is in .dtstart
@@ -90,8 +101,30 @@ async function icalProcess() {
 		var curDay = 0;
 
 		var prevPeriod = 0;
+		var offset = 0
 
 		for(var i = 0; i < events.length; i++) {
+			var description = events[i].getFirstPropertyValue('description');
+			var tAndP = description.split("\n");
+			var period = parseInt(tAndP[1].split(" p.")[1], 10);
+
+			if (Number.isNaN(period)) {
+				continue;
+			}
+			if(prevPeriod > period) {
+				if(prevPeriod == 8) { 
+					offset = i - 9;
+					listOfDays = ['mondayB', 'tuesdayB', 'wednesdayB', 'thursdayB', 'fridayB', 'mondayA', 'tuesdayA', 'wednesdayA', 'thursdayA', 'fridayA'];
+					break;
+				}
+			}
+
+			prevPeriod = period;
+		}
+
+		prevPeriod = 0;
+
+		for(var i = offset; i < events.length; i++) {
 			// console.log(events[i]);
 			//Read in values from the JSON file
 			var eventStart = events[i].getFirstPropertyValue('dtstart');
@@ -131,21 +164,16 @@ async function icalProcess() {
 				continue;
 			}
 			else if(prevPeriod > period) {
-				if(prevPeriod == 4) { 
-					curDay = 6;
-					continue;
-				}
 				curDay += 1;
 			}
 
-			if(!(curDay < 16)) {
+			if(!(curDay < 10)) {
 				break;
 			}
 
 			console.log(i);
 			console.log("day: " + curDay);
 			console.log("period: " + period)
-			console.log("date: " + periodStart.getDay());
 
 			// console.log(jsonData.timetableData[listOfDays[curDay]]);
 			// jsonData.timetableData[listOfDays[curDay]][`Period ${period}`];
