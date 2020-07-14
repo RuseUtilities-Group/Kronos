@@ -24,7 +24,6 @@ function passProcess(){
 		return;
 	}else{
 		alert("Bad KeyCard, if you need a new one please request one from ruseutilitiesgroup@gmail.com");
-		window.location.href = "./index.html";
 		return;
 	};
 };
