@@ -3,12 +3,8 @@ function passProcess(){
 	if(key === "true"){
 		window.location.href = "./earlyAccessGroup/dashboard.html";
 		return
-	}
+	}else{
 	const pass = document.getElementById('keyPassFile').files[0];
-	if(pass.size > 10000) {
-		alert("File is too large.");
-		return;
-	}
 
 	function readtxtFile() {
 		const reader = new FileReader()
@@ -31,5 +27,6 @@ function passProcess(){
 		window.location.href = "./index.html";
 		return
 	}
+}
 
 }
