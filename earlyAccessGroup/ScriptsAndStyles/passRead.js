@@ -7,9 +7,8 @@ function passProcess(){
 
 	function readtxtFile() {
 		var reader = new FileReader();
-		
 		reader.addEventListener('load', function (e) {
-		var output = e.target.result;
+		return e.target.result;
 		});
 		
 		reader.readAsBinaryString(keyPassFile);
