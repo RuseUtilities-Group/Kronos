@@ -8,10 +8,7 @@ function passProcess(){
 
 	function readtxtFile() {
 		const reader = new FileReader();
-		reader.onload = function () {
-			return reader.result;
-		};
-		reader.readAsText(pass);
+		return reader.readAsText(pass);
 	};
 
 	var txtInfo = readtxtFile();
