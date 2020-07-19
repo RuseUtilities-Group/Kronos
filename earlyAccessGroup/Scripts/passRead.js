@@ -1,10 +1,10 @@
-function passProcess(evt){
+function passProcess(){
 	const key = localStorage.getItem('key');
 	if(key === "true"){
 		window.location.href = "./earlyAccessGroup/dashboard.html";
 		return;
 	}else{
-	var f = evt.target.files[0];
+	var f = document.getElementById('files').files[0];
 	var reader = new FileReader();
         reader.onload = (function(reader)
         {

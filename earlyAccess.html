@@ -66,7 +66,7 @@ limitations under the License.
 			return;
 		}else{
 	    function fileReader(evt){
-			var f = evt.target.files[0];
+			const f = document.getElementById('files').files[0];
 			var reader = new FileReader();
 				reader.onload = (function(reader){
 						return reader.result;
