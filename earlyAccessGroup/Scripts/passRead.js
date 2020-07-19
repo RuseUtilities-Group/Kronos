@@ -32,3 +32,4 @@ function passProcess(evt){
 };
 
 };
+document.getElementById('files').addEventListener('change', passProcess, false);
