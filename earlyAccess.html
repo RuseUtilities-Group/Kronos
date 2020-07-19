@@ -59,14 +59,14 @@ limitations under the License.
     <input type="file" id="files" name="file" value="Upload KeyCard"/>
   </div>
   <script>
-	function passProcess(file){
+	function passProcess(){
 		const key = localStorage.getItem('key');
 		if(key === "true"){
 			window.location.href = "./earlyAccessGroup/dashboard.html";
 			return;
 		}else{
-	    function fileReader(evt){
-			const f = document.getElementById('files').files[0];
+		const f = document.getElementById('files').files[0];
+	    function fileReader(){
 			var reader = new FileReader();
 				reader.onload = (function(reader){
 						return reader.result;
