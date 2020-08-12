@@ -20,7 +20,7 @@ if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
   
     if (currentTheme === 'default') {
-        toggleSwitch.checked = true;
+        toggleSwitch.checked = false;
     }
 }
 
